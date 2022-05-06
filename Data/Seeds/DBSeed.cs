@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Data.Entities.Enums;
 using Data.Entities.Models;
 using System;
 using System.Collections.Generic;
