@@ -10,15 +10,6 @@ namespace Data.Seeds
     {
         public static void Execute(ModelBuilder builder)
         {
-            builder.Entity<Chat>()
-                .HasData(new List<Chat>
-                {
-                    new Chat
-                    {
-                        Id = 1,
-                        ChatName = "Matiša"
-                    },
-                });
 
             builder.Entity<College>()
                 .HasData(new List<College>
@@ -27,34 +18,6 @@ namespace Data.Seeds
                     {
                         Id = 1,
                         CollegeName = "FESB"
-                    }
-                }) ;
-
-            builder.Entity<Message>()
-                .HasData(new List<Message>
-                {
-                    new Message
-                    {
-                        Id = 1,
-                        MessageText = "Hnjoh",
-                        TimeSent = DateTime.Now,
-                        StudentId= 1,
-                        ChatId = 1
-                    }
-                }) ;
-
-            builder.Entity<ScheduleItem>()
-                .HasData(new List<ScheduleItem>
-                {
-                    new ScheduleItem
-                    {
-                        Id = 1,
-                        EventName = "Majmuniranje",
-                        StartTime = DateTime.Now,
-                        Duration = 300,
-                        RepetitionType = DurationType.Day,
-                        RepetitionCounter = 3,
-                        StudentId = 1
                     }
                 }) ;
 
@@ -77,6 +40,16 @@ namespace Data.Seeds
                         Id = 1,
                         SubjectName = "Matiša",
                         CollegeId = 1
+                    }
+                });
+
+            builder.Entity<Tag>()
+                .HasData(new List<Tag>
+                {
+                    new Tag
+                    {
+                        Id = 1,
+                        TagName = "c#"
                     }
                 });
         }

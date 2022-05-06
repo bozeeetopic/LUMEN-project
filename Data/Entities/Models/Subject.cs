@@ -12,5 +12,6 @@ namespace Data.Entities.Models
 
 
         public ICollection<Student> Students { get; set; }
+        public ICollection<Tag> Tags { get; set; }
     }
 }
